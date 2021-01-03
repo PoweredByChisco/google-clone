@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: arial,sans-serif;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header{
+    width: 100%; /* Tengo que colocarle esto porque de otra manera no me respeta el align-items del nav-right-section, esto pasa por alguna razon porque estoy reinicializando los estilos con el selector '*', esto no pasa si reinicializo los estilos en el body */
+    height: 60px;
+    outline: red 1px solid;
+}
+
+header nav{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+}
+
+nav .nav-right-section{
+    width: 350px;
+    /* Al haberle definido una altura al padre nostros ya no podemos definirle una altura mas grande, por eso ponemos una altura automatica respecto al padre*/
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+
+}
+
+.nav-right-section li{
+    margin-right: 15px ;
+}
+
+.nav-right-section a{
+    color: #000000DE;
+}
+
+.nav-right-section a:hover{
+    text-decoration: underline;
+}
+
+.nav-right-section__menu-icon{
+    background-image: url(/img/menu-grid.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain ;
+    width: 15px;
+    height: 15px;
+}
+
+.nav-right-section__button-session{
+    background-color: #4285f4;
+    margin-right: 10px;
+    width: 109.1px;
+    height: 32px;
+    color: white;
+    padding: 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    border: 1px solid;
+    border-radius: 3px;
+}
+
+
+main{
+    height: 20vh;
+    outline: red 1px solid;
+}
+
+footer{
+    height: 121px;
+    outline: red 1px solid;
+}
+
