@@ -73,8 +73,83 @@ nav .nav-right-section{
 
 
 main{
-    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
     outline: red 1px solid;
+}
+
+.main-logo{
+
+}
+
+.main-input{
+    
+}
+
+.main-input__container{
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 482px;
+    height: 44px;
+    border: 1px  rgba(0, 0, 0, 0.171) solid;
+    border-radius: 50px;
+}
+
+.main-input__container:hover{
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.145);
+}
+
+.main-input__container input{
+    font-size: unset;
+    box-sizing: content-box;
+    width: 387px;
+    height: 34px;
+    border: 0;
+    outline: none;
+}
+
+.main-buttons{
+    display: flex;
+    font-size: 14px;
+    color: #3c4043;
+}
+
+.main-buttons__search button{
+    color: inherit;
+    font-size: inherit;
+    box-sizing: content-box;
+    border: 1px solid transparent;
+    width: 119.075px;
+    height: 34px;
+    padding: 0 16px;
+    background-color: #F8F9FA;
+    border-radius: 4px;
+}
+
+.main-buttons__search button:hover{
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 0px 0.8px rgba(0, 0, 0, 0.13);
+}
+
+.main-buttons__lucky button{
+    color: inherit;
+    font-size: inherit;
+    box-sizing: content-box;
+    border: 1px solid transparent;
+    width: 133.850px;
+    height: 34px;
+    padding: 0 16px;
+    background-color: #F8F9FA;
+}
+
+.main-buttons__lucky button:hover{
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    box-shadow: 0px 0px 0.8px rgba(0, 0, 0, 0.13);
 }
 
 footer{
