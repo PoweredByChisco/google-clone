@@ -101,7 +101,7 @@ main{
 }
 
 .main-input__container:hover{
-    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.145);
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.143);
 }
 
 .main-input__container input{
