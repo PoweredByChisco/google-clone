@@ -1,0 +1,8 @@
+- La pagina original de google adapta su contenido segun se acerca la vista
+- La manera en como se posicionan los objetos adentro de la barra de busqueda no es de lo mas organico, (posicionamiento manual con position relative) *SOLUCIONADO
+- Hay que corregir el area de hipervinculo del icono de busqueda de voz, en el original de google es mucho mas grande el area seleccionable, en este caso platzi lo resuelve aplicando un estilo background-iamge al 'a', mientras que yo anido una etiqueta image al html *CUMPLIDO
+- Falta agregar un tool tip al microfono, es decir que cuando haces hover aparezca una etiqueta flotante
+- Esta muy pegado el texto del la barra de busqueda con el icono de buscar *SOLUCIONADO
+- En el original, al clickear la lupa automaticamente puedes empezar a escribir
+- Aplicamos en los botones uno para cada boton en vez de poder englobar los dos botones y aplicar un estilo directo a los dos a la vez
+- La ultima seccion, es diferente al original, el footer no crece en relacion al tamaño de su pantalla, esto responderia correctamente solo si desde el principio se maquetaba con grid

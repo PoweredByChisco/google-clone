@@ -8,6 +8,10 @@ html{
     font-family: arial,sans-serif;
 }
 
+body{
+    height: 100vh;
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
@@ -15,8 +19,8 @@ a {
 
 header{
     width: 100%; /* Tengo que colocarle esto porque de otra manera no me respeta el align-items del nav-right-section, esto pasa por alguna razon porque estoy reinicializando los estilos con el selector '*', esto no pasa si reinicializo los estilos en el body */
-    height: 60px;
-    outline: red 1px solid;
+    height: 7.1%;
+    
 }
 
 header nav{
@@ -75,18 +79,18 @@ nav .nav-right-section{
 main{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 40vh;
-    outline: red 1px solid;
+    height: 80.9%;
+    
 }
 
 .main-logo{
-
+    margin-top: 109px;
+    margin-bottom: 25px;
 }
 
 .main-input{
-    
+    margin-bottom: 28px;
 }
 
 .main-input__container{
@@ -96,13 +100,72 @@ main{
     align-items: center;
     width: 482px;
     height: 44px;
-    border: 1px  rgba(0, 0, 0, 0.171) solid;
+    border: 1px  #e3e5e8 solid;
     border-radius: 50px;
 }
 
 .main-input__container:hover{
-    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, 0.143);
+    box-shadow: 0 1px 5px 1px #d8dadd
 }
+
+.main-input__container .main-input__container--search-icon{
+    background-image: url(https://img.icons8.com/fluent-systems-regular/24/000000/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    height: 44px;
+    width: 44px;
+    position: relative;
+}
+
+
+.main-input__container .main-input__container--micro-icon{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/1200px-Google_mic.svg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    width: 44px;
+    height: 44px;
+    margin-right: 3px;
+}
+
+.main-input__container--tooltiptext{
+    visibility: hidden;
+    width: 120px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.801);
+    height: 29px;
+    font-size: 11px;
+    font-family: inherit;
+    font-weight: bold;
+    /* Position the tooltip text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    right: 38px;
+    
+    
+}
+
+.main-input__container--micro-icon:hover .main-input__container--tooltiptext{
+    visibility: visible;
+}
+
+.main-input__container--micro-icon .main-input__container--tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px; /*Lo alinea respecto al ancho del border*/
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.801) transparent;
+}
+/*Esta linea de codigo sirve para generar un triangulo, la manera en como lo hace es generar un cuadrado donde el centro solamente tiene un espacio, causando asi que la totalidad del cuadro sea puro borde, al ser asi cada borde de cada lado forma la ilusio de un triangulo*/
+
+
 
 .main-input__container input{
     font-size: unset;
@@ -120,6 +183,7 @@ main{
 }
 
 .main-buttons__search button{
+    margin-right: 10px;
     color: inherit;
     font-size: inherit;
     box-sizing: content-box;
@@ -134,6 +198,11 @@ main{
 .main-buttons__search button:hover{
     border: 1px solid rgba(0, 0, 0, 0.13);
     box-shadow: 0px 0px 0.8px rgba(0, 0, 0, 0.13);
+}
+
+.main-buttons__search button:focus{
+    outline: none;
+    border: solid 1px #4285F4;
 }
 
 .main-buttons__lucky button{
@@ -152,8 +221,72 @@ main{
     box-shadow: 0px 0px 0.8px rgba(0, 0, 0, 0.13);
 }
 
-footer{
-    height: 121px;
-    outline: red 1px solid;
+.main-buttons__lucky button:focus{
+    outline: none;
+    border: solid 1px #4285F4;
 }
 
+footer{
+    height: 12%;
+}
+
+.footer-container{
+    height: 100%;
+}
+
+
+.footer-container__country{
+    background-color: #F2F2F2;
+    width: 100%;
+    height: 50%;
+    border: 1px solid #d9dadb;
+    display: flex;
+    align-items: center;
+    color: rgba(0,0,0,.54);
+    font-size: 15px;
+    padding-left: 27px;
+}
+
+.footer-container__others{
+    background-color: #F2F2F2;
+    border: 1px solid #e8e9ec;
+    height: 50%;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.footer-container__others ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-container__others a{
+    color: rgba(0,0,0,.54);
+}
+
+.footer-container__others a:hover{
+    text-decoration: underline;
+}
+
+footer .footer-container .footer-container__others .footer-container__others--left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer .footer-container .footer-container__others .footer-container__others--left li{
+    margin-left: 16px;
+}
+
+footer .footer-container .footer-container__others .footer-container__others--right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer .footer-container .footer-container__others .footer-container__others--right li{
+    margin-right: 16px;
+}
